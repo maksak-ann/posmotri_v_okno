@@ -16,6 +16,7 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  letter-spacing: 0;
 }
 
 h1,
@@ -71,6 +72,7 @@ ol {
 .result__video-container {
   width: 711px;
   height: 386px;
+  position: relative;
 }
 
 .result__video {
@@ -80,7 +82,8 @@ ol {
 }
 
 .content__list {
-  max-height: 298px;
+  position: relative;
+  height: 298px;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -97,25 +100,17 @@ ol {
   width: 194px;
   height: 103px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .content__video-card-description-container {
   flex-grow: 1;
 }
 
-.result__video-container {
-  position: relative;
-}
-
-.content__list {
-  position: relative;
-}
-
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0;
   margin-block-end: 5px;
 }
 
@@ -124,7 +119,6 @@ ol {
   font-size: 75px;
   font-weight: 700;
   line-height: 70px;
-  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -138,15 +132,23 @@ ol {
   font-size: 30px;
   font-weight: 700;
   line-height: 1;
-  letter-spacing: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 190px;
+
 }
 
 .content__video-card-description {
   font-size: 18px;
   font-weight: 400;
   line-height: 16px;
-  letter-spacing: 0;
   margin-block-start: 6px;
+  max-height: 65px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .visually-hidden {
@@ -175,7 +177,6 @@ ol {
 .search-form__label-text {
   font-size: 18px;
   font-weight: 400;
-  letter-spacing: 0;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -194,7 +195,6 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
-  letter-spacing: 0;
   color: #fff;
   outline: none;
 }
@@ -213,7 +213,6 @@ ol {
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
-  letter-spacing: 0;
   text-align: center;
   color: #fff;
   background-color: transparent;
@@ -256,11 +255,14 @@ ol {
   background-color: #545050;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .button:focus-visible {
   outline: #fff solid 1px;
   outline-offset: 1px;
 }
-
 
 .content__card-link {
   display: block;
@@ -286,4 +288,10 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline;
+}
+
+.more-button {
+  margin: 2px;
+  width: 399px;
+  height: 34px;
 }

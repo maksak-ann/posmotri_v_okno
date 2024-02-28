@@ -9,6 +9,10 @@ html {
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -42,13 +46,6 @@ ol {
   list-style: none;
 }
 
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .content {
   display: flex;
   gap: 30px;
@@ -67,6 +64,10 @@ ol {
   justify-content: space-between;
   align-items: flex-start;
   margin-block-start: 16px;
+}
+
+.result {
+  padding-bottom: 2px;
 }
 
 .result__video-container {
@@ -88,7 +89,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  margin-block-start: 21px;
+  margin-block-start: 25px;
 }
 
 .content__video-card {
@@ -135,7 +136,7 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 190px;
+  max-width: 200px;
 
 }
 
@@ -212,7 +213,7 @@ ol {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 20px;
   text-align: center;
   color: #fff;
   background-color: transparent;
@@ -293,5 +294,4 @@ ol {
 .more-button {
   margin: 2px;
   width: 399px;
-  height: 34px;
 }
